@@ -19,4 +19,15 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="20260707-002" author="deniz">
+        <insert tableName="kullanicilar">
+            <column name="isim" value="Deniz"/>
+            <column name="email" value="deniz@example.com"/>
+        </insert>
+        <insert tableName="kullanicilar">
+            <column name="isim" value="Ahmet"/>
+            <column name="email" value="ahmet@example.com"/>
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
