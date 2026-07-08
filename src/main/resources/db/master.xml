@@ -6,5 +6,6 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
     <include file="db/001-tablolar.xml"/>
+    <include file="db/002-urunler.xml"/>
 
 </databaseChangeLog>

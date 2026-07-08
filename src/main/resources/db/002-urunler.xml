@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="20260709" author="deniz">
+        <comment>Uygulama başlarken urunler tablosunu otomatik oluşturan set</comment>
+
+        <createTable tableName="urunler">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="urun_adi" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fiyat" type="NUMERIC(10,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="stok_adedi" type="INTEGER" defaultValue="0"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20260708-insert-initial-products" author="deniz">
+        <comment>Urunler tablosuna başlangıç verilerini otomatik yükler</comment>
+
+        <insert tableName="urunler">
+            <column name="id" valueNumeric="1"/>
+            <column name="urun_adi" value="Oyuncu Kulaklığı"/>
+            <column name="fiyat" valueNumeric="1250.00"/>
+            <column name="stok_adedi" valueNumeric="50"/>
+        </insert>
+
+        <insert tableName="urunler">
+            <column name="id" valueNumeric="2"/>
+            <column name="urun_adi" value="Mekanik Klavye"/>
+            <column name="fiyat" valueNumeric="2100.50"/>
+            <column name="stok_adedi" valueNumeric="30"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
