@@ -7,5 +7,7 @@
 
     <include file="db/001-tablolar.xml"/>
     <include file="db/002-urunler.xml"/>
+    <include file="db/changelog/2026/07/08-01-changelog.xml"/>
+    <include file="db/changelog/2026/07/09-04-changelog.xml"/>
 
 </databaseChangeLog>

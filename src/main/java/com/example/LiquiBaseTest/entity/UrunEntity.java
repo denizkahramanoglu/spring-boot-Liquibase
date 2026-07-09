@@ -21,6 +21,9 @@ public class UrunEntity {
     @Column(name = "stok_adedi")
     private Integer stokAdedi;
 
+    @Column(name = "indirim_orani")
+    private Integer indirimOrani;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
