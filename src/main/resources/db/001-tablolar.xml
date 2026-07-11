@@ -29,5 +29,11 @@
             <column name="email" value="ahmet@example.com"/>
         </insert>
     </changeSet>
+    <changeSet id="20260711-001" author="deniz">
+        <update tableName="kullanicilar">
+            <column name="email" value="ahmet@gmail.com"/>
+            <where>isim = 'Ahmet' AND email = 'ahmet@example.com'</where>
+        </update>
+    </changeSet>
 
 </databaseChangeLog>
