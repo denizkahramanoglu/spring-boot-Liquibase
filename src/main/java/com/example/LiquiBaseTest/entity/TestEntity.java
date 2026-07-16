@@ -1,7 +1,13 @@
 package com.example.LiquiBaseTest.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     @Entity
     @Table(name = "kullanicilar")
     public class TestEntity {
@@ -15,31 +21,5 @@ import jakarta.persistence.*;
 
         @Column(name = "email", nullable = false, unique = true, length = 100)
         private String email;
-        public TestEntity() {
-        }
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public String getIsim() {
-            return isim;
-        }
-
-        public void setIsim(String isim) {
-            this.isim = isim;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
     }
 
